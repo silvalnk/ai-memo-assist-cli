@@ -80,7 +80,7 @@ API Lua: `index`, `ask`, `log`, `register_skill`, `run_skill`, `list_skills`, `d
 ## Dois tipos de “skill” (não misturar)
 
 - **Lua (Mnemo)** — `register_skill` / `run_skill` no binário
-- **Cursor (este repo)** — `.cursor/skills/*/SKILL.md` (`follow-spec`, `implement-rag`, `implement-lua-skills`, `teach-mnemo`)
+- **Cursor (este repo)** — `.cursor/skills/*/SKILL.md` (`follow-spec`, `implement-rag`, `implement-skills`, `teach-mnemo`)
 
 ## Non-goals (não adicionar)
 

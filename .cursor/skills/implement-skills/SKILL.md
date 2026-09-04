@@ -1,9 +1,9 @@
 ---
-name: implement-lua-skills
+name: implement-skills
 description: Implements Lua skill registry and prompt dispatch for Mnemo (register_skill, run_skill, list_skills, dispatch). Use when working on skills, dispatch, skills.lua, or when the user asks how prompts map to skills in rag_mnemo.
 ---
 
-# Implement Lua skills + dispatch
+# Implement skills + dispatch
 
 ## API (host exposes to Lua)
 
