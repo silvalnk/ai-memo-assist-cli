@@ -1,0 +1,15 @@
+[package]
+name = "rag-mnemo"
+version = "0.1.0"
+edition = "2021"
+description = "Mnemo — lab mínimo de RAG + Skills (Rust + Lua)"
+
+[[bin]]
+name = "rag-mnemo"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+mlua = { version = "0.10", features = ["lua54", "vendored"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
