@@ -1,47 +1,48 @@
-log("=== Mnemo skills demo ===")
+-- Mnemo — skills CLI (CAP-5)
+log("Mnemo: indexing knowledge/")
 index("knowledge/")
 
 local function show_hits(hits)
   if #hits == 0 then
-    print("Não foi encontrado.")
+    print("Not found.")
     return
   end
   for i, hit in ipairs(hits) do
-    print(string.format("[%d] %.4f %s", i, hit.score, hit.source))
+    print(string.format("--- #%d score=%.4f source=%s ---", i, hit.score, hit.source))
     print(hit.text)
-    print("---")
   end
 end
 
 register_skill(
   "explain_rag",
-  "Busca na knowledge o que e RAG e imprime os trechos",
+  "Search the knowledge base for what RAG is and print the snippets",
   function(args)
-    local hits = ask("o que e RAG?")
-    log("Skill explain_rag: " .. tostring(#hits) .. " hits")
-    show_hits(hits)
+    show_hits(ask("o que e RAG?"))
   end
 )
 
 register_skill(
   "explain_chunking",
-  "Busca na knowledge o que e chunking",
+  "Search the knowledge base for what chunking is",
   function(args)
-    local hits = ask("o que e chunking?")
-    show_hits(hits)
+    show_hits(ask("o que e chunking?"))
   end
 )
 
-log("Skills registradas:")
+local name = (arg and arg[1] and arg[1] ~= "") and arg[1] or "explain_rag"
+
+local available = {}
 for _, s in ipairs(list_skills()) do
-  print(" - " .. s.name .. ": " .. s.description)
+  available[s.name] = true
 end
 
-log("1) Chamada explícita: run_skill")
-run_skill("explain_rag", {})
-
-log("2) Prompt com nome: dispatch('skill:explain_chunking')")
-dispatch("skill:explain_chunking")
-
-log("3) Prompt em linguagem natural: dispatch('explica o que e RAG')")
-dispatch("explica o que e RAG")
+if not available[name] then
+  print("Unknown skill: '" .. name .. "'.")
+  print("Available skills:")
+  for _, s in ipairs(list_skills()) do
+    print(" - " .. s.name .. ": " .. s.description)
+  end
+else
+  log("Skill: " .. name)
+  run_skill(name, {})
+end

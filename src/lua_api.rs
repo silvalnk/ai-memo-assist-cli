@@ -137,7 +137,7 @@ fn run_skill(lua: &Lua, name: &str, args: Value) -> mlua::Result<Value> {
         let borrow = registry.borrow();
         let skill = borrow.get(name).ok_or_else(|| {
             mlua::Error::external(format!(
-                "skill '{name}' não registrada. Use list_skills()."
+                "skill '{name}' is not registered. Use list_skills()."
             ))
         })?;
         lua.registry_value::<Function>(&skill.func)?

@@ -1,52 +1,15 @@
-# skills_demo.lua (especificação do script)
+# Script Lua do Mnemo (`skills.lua`)
 
-Quando o código Rust existir, este conteúdo vira `scripts/skills_demo.lua`.
+O binário `rag-mnemo` executa [`scripts/skills.lua`](skills.lua).
 
-Objetivo (CAP-5): mostrar **Skill** usando RAG por baixo.
+Igual ao `ask.lua`: o argumento extra escolhe **qual skill** rodar.
 
-```lua
-log("=== Mnemo skills demo ===")
-index("knowledge/")
-
-register_skill(
-  "explain_rag",
-  "Busca na knowledge o que e RAG e imprime os trechos",
-  function(args)
-    local hits = ask("o que e RAG?")
-    log("Skill explain_rag: " .. tostring(#hits) .. " hits")
-    for i, hit in ipairs(hits) do
-      print(string.format("[%d] %.4f %s", i, hit.score, hit.source))
-      print(hit.text)
-      print("---")
-    end
-  end
-)
-
-register_skill(
-  "explain_chunking",
-  "Busca na knowledge o que e chunking",
-  function(args)
-    local hits = ask("o que e chunking?")
-    for i, hit in ipairs(hits) do
-      print(string.format("[%d] %.4f %s", i, hit.score, hit.source))
-      print(hit.text)
-    end
-  end
-)
-
-log("Skills registradas:")
-for _, s in ipairs(list_skills()) do
-  print(" - " .. s.name .. ": " .. s.description)
-end
-
-log("1) Chamada explícita: run_skill")
-run_skill("explain_rag", {})
-
-log("2) Prompt com nome: dispatch('skill:explain_chunking')")
-dispatch("skill:explain_chunking")
-
-log("3) Prompt em linguagem natural: dispatch('explica o que e RAG')")
-dispatch("explica o que e RAG")
+```bash
+cargo run -- scripts/skills.lua
+cargo run -- scripts/skills.lua explain_rag
+cargo run -- scripts/skills.lua explain_chunking
 ```
 
-Smoke: `cargo run -- scripts/skills_demo.lua`
+Without a matching snippet the script prints `Not found.` Unknown skill names are listed; the default skill is `explain_rag`.
+
+API: `index`, `register_skill`, `run_skill`, `list_skills`.

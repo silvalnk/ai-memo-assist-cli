@@ -9,7 +9,7 @@ index("knowledge/")
 local pergunta = (arg and arg[1] and arg[1] ~= "") and arg[1] or "o que e RAG?"
 local hits = ask(pergunta)
 if #hits == 0 then
-  print("Não foi encontrado.")
+  print("Not found.")
 else
   -- só trechos relacionados (filtro no Rust)
 end

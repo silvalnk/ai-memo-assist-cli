@@ -12,12 +12,12 @@ impl std::fmt::Display for DispatchError {
         match self {
             DispatchError::UnknownSkill { name, available } => write!(
                 f,
-                "skill desconhecida: '{name}'. Skills disponíveis: {}",
+                "unknown skill: '{name}'. Available skills: {}",
                 format_available(available)
             ),
             DispatchError::NoMatch { text, available } => write!(
                 f,
-                "nenhuma skill para: '{text}'. Skills disponíveis: {}",
+                "no skill for: '{text}'. Available skills: {}",
                 format_available(available)
             ),
         }
@@ -26,7 +26,7 @@ impl std::fmt::Display for DispatchError {
 
 fn format_available(available: &[String]) -> String {
     if available.is_empty() {
-        "(nenhuma registrada)".into()
+        "(none registered)".into()
     } else {
         available.join(", ")
     }

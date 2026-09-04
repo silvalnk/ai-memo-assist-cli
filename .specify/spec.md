@@ -24,12 +24,12 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
 
 - **CAP-2** — Buscar trechos por pergunta
   - **intent:** Retornar top-k chunks **relacionados** com `score`, `text`, `source` (cosine similarity). Não devolver o caderno inteiro nem hits com score ≤ 0.
-  - **success:** `ask("o que e RAG?")` devolve só trechos relevantes; pergunta sem overlap (ou só ruído do stub) devolve lista vazia. Scripts imprimem `Não foi encontrado.` quando a lista é vazia.
+  - **success:** `ask("o que e RAG?")` devolve só trechos relevantes; pergunta sem overlap (ou só ruído do stub) devolve lista vazia. Scripts imprimem `Not found.` quando a lista é vazia.
   - **CLI:** `rag-mnemo scripts/ask.lua` usa a pergunta padrão; `rag-mnemo scripts/ask.lua "o que e chunking?"` busca de forma dinâmica.
 
 - **CAP-3** — Script Lua como interface
   - **intent:** API Lua: `index`, `ask`, `log`, `register_skill`, `run_skill`, `list_skills`, `dispatch`.
-  - **success:** `cargo run -- scripts/ask.lua` e `cargo run -- scripts/skills_demo.lua` funcionam.
+  - **success:** `cargo run -- scripts/ask.lua` e `cargo run -- scripts/skills.lua` funcionam.
 
 - **CAP-4** — Documentação SDD + README didático
   - **intent:** Spec, plan e README (RAG + Skill) para iniciante.
@@ -41,6 +41,7 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
     1. `register_skill("explain_rag", "Explica RAG usando a knowledge base", fn)`
     2. `run_skill("explain_rag", {})` imprime trechos via RAG
     3. `list_skills()` lista nome + descrição
+  - **CLI:** `rag-mnemo scripts/skills.lua` usa `explain_rag`; `rag-mnemo scripts/skills.lua explain_chunking` executa pelo nome e imprime o resultado. Nome desconhecido → erro claro (não inventa skill).
   - **doc:** `docs/WHAT_IS_A_SKILL.md` + `knowledge/skill.md`
 
 - **CAP-6** — Ligar um **prompt do usuário** a uma skill (sem LLM)
@@ -71,7 +72,7 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
 Alguém clona `rag-mnemo`, lê a spec, roda:
 
 1. `scripts/ask.lua` → vê hits do RAG
-2. `scripts/skills_demo.lua` → vê skill registrada, `run_skill` e `dispatch("...")`
+2. `scripts/skills.lua [nome]` → vê o resultado da skill (`explain_rag` por padrão)
 
 e consegue dizer: “`ask` é a busca crua; a **skill** é um pacote nomeado; o **prompt** só escolhe qual skill rodar.”
 

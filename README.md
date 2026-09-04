@@ -56,10 +56,11 @@ cargo test
 cargo run -- scripts/ask.lua                    # pergunta padrão: o que e RAG?
 cargo run -- scripts/ask.lua "o que e chunking?"
 cargo run -- scripts/ask.lua "asdfgh pizza"
-cargo run -- scripts/skills.lua                 # RAG + skills
+cargo run -- scripts/skills.lua                      # skill padrão: explain_rag
+cargo run -- scripts/skills.lua explain_chunking
 ```
 
-Sem trecho relacionado, o script imprime `Não foi encontrado.` Sem argumento, a pergunta padrão continua a da spec.
+Sem trecho relacionado, o script imprime `Not found.` Sem argumento, `ask.lua` usa a pergunta da spec e `skills.lua` usa `explain_rag`.
 
 ## Estrutura
 

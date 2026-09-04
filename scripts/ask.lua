@@ -1,13 +1,13 @@
--- Mnemo — volante do usuário (CAP-2 / CAP-3 da spec)
-log("Mnemo: indexando knowledge/")
+-- Mnemo — user CLI (CAP-2 / CAP-3)
+log("Mnemo: indexing knowledge/")
 index("knowledge/")
 
-local pergunta = (arg and arg[1] and arg[1] ~= "") and arg[1] or "o que e RAG?"
-log("Perguntando: " .. pergunta)
+local question = (arg and arg[1] and arg[1] ~= "") and arg[1] or "o que e RAG?"
+log("Asking: " .. question)
 
-local hits = ask(pergunta)
+local hits = ask(question)
 if #hits == 0 then
-  print("Não foi encontrado.")
+  print("Not found.")
 else
   for i, hit in ipairs(hits) do
     print(string.format("--- #%d score=%.4f source=%s ---", i, hit.score, hit.source))

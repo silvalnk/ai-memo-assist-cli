@@ -36,7 +36,7 @@ flowchart TB
     end
     subgraph luaLayer [Lua]
         AskScript[ask.lua]
-        SkillScript[skills_demo.lua]
+        SkillScript[skills.lua]
         Skills[Skill registry]
     end
     AskScript --> LuaHost
@@ -56,7 +56,7 @@ flowchart TB
 
 ## Módulos Rust
 
-- `main.rs` — CLI: `rag-mnemo <script.lua> [pergunta]` (`arg[1]` no Lua)
+- `main.rs` — CLI: `rag-mnemo <script.lua> [pergunta|skill]` (`arg[1]` no Lua)
 - `store.rs` — vector store + cosine + JSON
 - `rag.rs` — chunk, embed stub, index, query
 - `lua_api.rs` — `index`, `ask`, `log`, `register_skill`, `run_skill`, `list_skills`, `dispatch`
@@ -75,7 +75,7 @@ flowchart TB
 - [x] Registry de skills no host Lua (HashMap name → descrição + callback)
 - [x] `register_skill(name, description, fn)`
 - [x] `run_skill(name, args_table)` / `list_skills()`
-- [x] `scripts/skills_demo.lua` — registra `explain_rag` e `explain_chunking`
+- [x] `scripts/skills.lua` — registra `explain_rag` e `explain_chunking`; CLI passa o nome
 - [x] `dispatch(texto)` — `skill:nome` ou palavras-chave (rag, chunking, embedding, skill)
 - [x] `docs/WHAT_IS_A_SKILL.md` (inclui “Skills e o prompt”)
 - [x] `knowledge/skill.md` (indexável pelo RAG)
@@ -83,7 +83,7 @@ flowchart TB
 ### Analyze
 - [x] `cargo test`
 - [x] Smoke: `cargo run -- scripts/ask.lua`
-- [x] Smoke: `cargo run -- scripts/skills_demo.lua`
+- [x] Smoke: `cargo run -- scripts/skills.lua`
 
 ## Docs
 
