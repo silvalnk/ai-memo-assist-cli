@@ -12,7 +12,7 @@ Answer in Portuguese. Keep analogies. Do not mix in other repos.
 - `AGENTS.md` + `.specify/CONTEXT.md` — estado atual (não depende do chat)
 - `README.md`
 - `docs/WHAT_IS_A_SKILL.md` — RAG vs Skill vs Agent; prompt → dispatch
-- `.specify/spec.md` — official capabilities
+- `.specify/SPEC.md` — official capabilities
 - `knowledge/*.md` — short study texts
 
 ## Teaching map

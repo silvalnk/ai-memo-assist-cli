@@ -18,8 +18,8 @@ Pasta local: `rag_mnemo/` · Marca: **Mnemo** · Binário: `rag-mnemo`
 
 | Arquivo | Papel |
 |---------|--------|
-| [`.specify/spec.md`](.specify/spec.md) | **O quê** (fonte da verdade) |
-| [`.specify/plan.md`](.specify/plan.md) | **Como** + tasks |
+| [`.specify/SPEC.md`](.specify/SPEC.md) | **O quê** (fonte da verdade) |
+| [`.specify/PLAN.md`](.specify/PLAN.md) | **Como** + tasks |
 | [`.specify/CONTEXT.md`](.specify/CONTEXT.md) | Estado atual (retoma o lab sem o chat) |
 | [`.specify/COMMITS.md`](.specify/COMMITS.md) | Conventional commits + emoji |
 | [`AGENTS.md`](AGENTS.md) | Briefing fixo para o agente Cursor |
@@ -70,8 +70,8 @@ Sem trecho relacionado, o script imprime `Not found.` Sem argumento, `ask.lua` u
 ```
 mnemo-rag-engineering-lab/
   AGENTS.md                  # briefing do agente (nova sessão)
-  .specify/spec.md
-  .specify/plan.md
+  .specify/SPEC.md
+  .specify/PLAN.md
   .specify/CONTEXT.md        # estado atual do lab
   docs/WHAT_IS_A_SKILL.md
   knowledge/

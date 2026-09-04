@@ -1,11 +1,11 @@
 # Mnemo / rag-mnemo — Plan (como construir)
 
-Companion de [spec.md](./spec.md).
+Companion de [SPEC.md](./SPEC.md).
 
 ## Abordagem SDD
 
-1. Specify → `spec.md`  
-2. Plan → este arquivo  
+1. Specify → `SPEC.md`  
+2. Plan → `PLAN.md`  
 3. Tasks → checklist  
 4. Implement → Rust + Lua  
 5. Analyze → `cargo test` + smoke dos dois scripts  
@@ -78,7 +78,7 @@ flowchart TB
 - [x] `scripts/skills.lua` — registra `explain_rag` e `explain_chunking`; CLI passa o nome
 - [x] `dispatch(texto)` — `skill:nome` ou palavras-chave (rag, chunking, embedding, skill)
 - [x] `docs/WHAT_IS_A_SKILL.md` (inclui “Skills e o prompt”)
-- [x] `knowledge/skill.md` (indexável pelo RAG)
+- [x] `knowledge/SKILL.md` (indexável pelo RAG)
 
 ### Analyze
 - [x] `cargo test`

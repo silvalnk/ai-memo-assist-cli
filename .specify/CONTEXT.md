@@ -1,8 +1,11 @@
 # Mnemo — contexto persistente
 
-> Leia este arquivo **no início de qualquer sessão** (Cursor ou clone novo).  
-> Não depende do chat anterior. A fonte da verdade continua sendo [spec.md](./spec.md).  
-> **Quem altera código atualiza este arquivo (e spec/plan/README se o contrato ou o “como rodar” mudarem).**
+> Leia este arquivo **no início de qualquer sessão** (Cursor ou clone novo).
+> Não depende do chat anterior. A fonte da verdade continua sendo [SPEC.md](./SPEC.md).
+> **Quem altera código atualiza este arquivo (e SPEC/PLAN/README se o contrato ou o “como rodar” mudarem).**
+
+Markdown neste repo: nomes SDD em **MAIÚSCULAS** (`SPEC.md`, `PLAN.md`, `CONTEXT.md`, `COMMITS.md`, `AGENTS.md`). Exceções (ferramentas exigem): `README.md`, `.cursor/skills/*/SKILL.md`.
+
 
 Atualizado para o estado **implementado** do lab (CAP-1…6 feitos).
 
@@ -18,13 +21,13 @@ Atualizado para o estado **implementado** do lab (CAP-1…6 feitos).
 | Embeddings | stub hash determinístico (128 dims), **não** entende português |
 | Store | `vector_store.json` (gerado; está no `.gitignore`) |
 | CLI copy | **inglês** (`Not found.`, `Unknown skill`, `Asking:`) |
-| Knowledge | `knowledge/*.md` em **português** (é o caderno, não a UI) |
+| Knowledge | `knowledge/*.md` em **português** (é o caderno, não a UI). Nomes: `RAG.md`, `CHUNKING.md`, `EMBEDDINGS.md`, `SKILL.md` |
 
 ## O que o lab ensina
 
-1. **RAG** — indexar → buscar (cosine) → mostrar trechos  
-2. **Skill** — capacidade **nomeada** que por dentro chama `ask`  
-3. **`dispatch`** — roteador burro (string → skill), **não** é Agent  
+1. **RAG** — indexar → buscar (cosine) → mostrar trechos
+2. **Skill** — capacidade **nomeada** que por dentro chama `ask`
+3. **`dispatch`** — roteador burro (string → skill), **não** é Agent
 
 `ask` = folhear o caderno. Skill = post-it. Agent (pensar sozinho) = **fora de escopo**.
 
@@ -76,7 +79,7 @@ API Lua: `index`, `ask`, `log`, `register_skill`, `run_skill`, `list_skills`, `d
 
 ## Dois tipos de “skill” (não misturar)
 
-- **Lua (Mnemo)** — `register_skill` / `run_skill` no binário  
+- **Lua (Mnemo)** — `register_skill` / `run_skill` no binário
 - **Cursor (este repo)** — `.cursor/skills/*/SKILL.md` (`follow-spec`, `implement-rag`, `implement-lua-skills`, `teach-mnemo`)
 
 ## Non-goals (não adicionar)
@@ -87,8 +90,8 @@ Agent loop, RFC/HITL, OpenAI, UI web, Qdrant, hybrid search, reranking, LLM gera
 
 | Arquivo | Papel |
 |---------|--------|
-| [spec.md](./spec.md) | contrato (o quê) |
-| [plan.md](./plan.md) | como + tasks |
+| [SPEC.md](./SPEC.md) | contrato (o quê) |
+| [PLAN.md](./PLAN.md) | como + tasks |
 | Este CONTEXT | estado atual, para retomar sem o chat |
 | [COMMITS.md](./COMMITS.md) | conventional commits + emoji |
 | `README.md` | visão + comandos |

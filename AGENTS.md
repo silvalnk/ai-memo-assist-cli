@@ -5,8 +5,8 @@ This file is the **session-independent** brief for Cursor (and any coding agent)
 ## Always
 
 1. Read [`.specify/CONTEXT.md`](.specify/CONTEXT.md) (current product state).
-2. Read [`.specify/spec.md`](.specify/spec.md) (source of truth).
-3. Read [`.specify/plan.md`](.specify/plan.md) before changing how things are built.
+2. Read [`.specify/SPEC.md`](.specify/SPEC.md) (source of truth).
+3. Read [`.specify/PLAN.md`](.specify/PLAN.md) before changing how things are built.
 4. If code and spec disagree, **change the code** or propose a spec update first. Never silently violate the spec.
 5. Follow [`.cursor/skills/follow-spec/SKILL.md`](.cursor/skills/follow-spec/SKILL.md) on any code change.
 6. **Same turn as the code change:** update `.specify/CONTEXT.md` and any of spec / plan / README / `docs/WHAT_IS_A_SKILL.md` / agent skills that would otherwise lie. Docs lagging behind code is a spec violation (CAP-4).
@@ -15,7 +15,7 @@ This file is the **session-independent** brief for Cursor (and any coding agent)
 
 ## Keep docs in sync
 
-Behavior change → markdown change. Minimum: **CONTEXT.md**. Contract change → **spec.md** too. How-to for humans → **README.md**.
+Behavior change → markdown change. Minimum: **CONTEXT.md**. Contract change → **SPEC.md** too. How-to for humans → **README.md**.
 
 
 ## Product (one paragraph)

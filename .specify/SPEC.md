@@ -33,7 +33,7 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
 
 - **CAP-4** — Documentação SDD + README didático
   - **intent:** Spec, plan, CONTEXT, README (RAG + Skill) para iniciante **e** para retomar o lab sem o chat anterior.
-  - **success:** Leitor explica as 3 etapas do RAG e a diferença Skill vs `ask` direto. Uma sessão nova no Cursor lê `AGENTS.md` + `.specify/CONTEXT.md` e recupera o mesmo contrato. Qualquer mudança de comportamento no código **atualiza no mesmo passo** spec/plan/CONTEXT/README (e skills do Cursor, se o contrato delas mudar). Docs defasados = CAP-4 falhou. Commits git seguem [`.specify/COMMITS.md`](./COMMITS.md) (`✨ feat:` …, inglês).
+  - **success:** Leitor explica as 3 etapas do RAG e a diferença Skill vs `ask` direto. Uma sessão nova no Cursor lê `AGENTS.md` + `.specify/CONTEXT.md` e recupera o mesmo contrato. Qualquer mudança de comportamento no código **atualiza no mesmo passo** SPEC/PLAN/CONTEXT/README (e skills do Cursor, se o contrato delas mudar). Docs defasados = CAP-4 falhou. Commits git seguem [`.specify/COMMITS.md`](./COMMITS.md) (`✨ feat:` …, inglês). Nomes dos markdowns SDD: **MAIÚSCULAS** (`SPEC.md`, `PLAN.md`); `README.md` e `SKILL.md` ficam assim por exigência do GitHub/Cursor.
 
 - **CAP-5** — Mini sistema de Skills (sem Agent completo)
   - **intent:** Skill = capacidade **nomeada** + descrição + função Lua. O usuário registra skills que por dentro chamam `ask` (ou lógica fixa). Assim se aprende o padrão “skill = ferramenta reutilizável” usado em agentes — **sem** o loop think/plan/act de um Agent.
@@ -42,7 +42,7 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
     2. `run_skill("explain_rag", {})` imprime trechos via RAG
     3. `list_skills()` lista nome + descrição
   - **CLI:** `rag-mnemo scripts/skills.lua` usa `explain_rag`; `rag-mnemo scripts/skills.lua explain_chunking` executa pelo nome e imprime o resultado. Nome desconhecido → erro claro (não inventa skill).
-  - **doc:** `docs/WHAT_IS_A_SKILL.md` + `knowledge/skill.md`
+  - **doc:** `docs/WHAT_IS_A_SKILL.md` + `knowledge/SKILL.md`
 
 - **CAP-6** — Ligar um **prompt do usuário** a uma skill (sem LLM)
   - **intent:** Mostrar o padrão da indústria “o texto do usuário escolhe a ferramenta”, de forma didática. Sem modelo pago: `dispatch(texto)` lê a frase, escolhe uma skill pelo **nome** ou por **palavras-chave**, e chama `run_skill`.

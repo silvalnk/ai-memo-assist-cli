@@ -8,8 +8,8 @@ description: Treats rag_mnemo Spec Kit files as source of truth. Use when editin
 ## Before any code change
 
 1. Read `.specify/CONTEXT.md` (current state — survives a new Cursor session).
-2. Read `.specify/spec.md` (what to build).
-3. Read `.specify/plan.md` (how / tasks).
+2. Read `.specify/SPEC.md` (what to build).
+3. Read `.specify/PLAN.md` (how / tasks).
 4. If code and spec disagree, **change the code** or propose a spec update first — never silently violate the spec.
 5. **After any behavior change, update the markdowns in the same turn.** Do not leave docs stale.
 
@@ -21,8 +21,8 @@ When you change CLI, Lua API, RAG, skills, file names, or messages, update **in 
 
 | File | Update when |
 |------|-------------|
-| `.specify/spec.md` | Contract changed (CAPs, success, CLI, boundaries) |
-| `.specify/plan.md` | Architecture, modules, or tasks changed |
+| `.specify/SPEC.md` | Contract changed (CAPs, success, CLI, boundaries) |
+| `.specify/PLAN.md` | Architecture, modules, or tasks changed |
 | `.specify/CONTEXT.md` | **Always** — this is the live snapshot |
 | `AGENTS.md` | Commands, API, or agent rules changed |
 | `README.md` | How to run / structure / GitHub |
