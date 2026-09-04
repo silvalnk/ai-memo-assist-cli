@@ -4,7 +4,15 @@
 > Lab mínimo de **RAG + Skills** com **Rust + Lua**.  
 > 100% offline. Spec-Driven (SDD).
 
-Pasta: `rag-mnemo/` · Marca: **Mnemo** · Binário: `rag-mnemo`
+Repositório: [silvalnk/mnemo-rag-engineering-lab](https://github.com/silvalnk/mnemo-rag-engineering-lab)  
+Pasta local: `rag_mnemo/` · Marca: **Mnemo** · Binário: `rag-mnemo`
+
+| | |
+|--|--|
+| Stack | Rust (core) + Lua (scripts) |
+| Persistência | `vector_store.json` |
+| Embeddings | stub determinístico (hash), sem API |
+| Fora de escopo | Agent loop, OpenAI, UI web, Qdrant |
 
 ## SDD (comece por aqui)
 
@@ -42,12 +50,13 @@ Detalhe: [`docs/WHAT_IS_A_SKILL.md`](docs/WHAT_IS_A_SKILL.md) → seção **Skil
 ## Como rodar
 
 ```bash
-cd rag-mnemo
+git clone git@github.com:silvalnk/mnemo-rag-engineering-lab.git
+cd mnemo-rag-engineering-lab
 cargo test
 cargo run -- scripts/ask.lua                    # pergunta padrão: o que e RAG?
 cargo run -- scripts/ask.lua "o que e chunking?"
 cargo run -- scripts/ask.lua "asdfgh pizza"
-cargo run -- scripts/skills_demo.lua            # RAG + skills
+cargo run -- scripts/skills.lua                 # RAG + skills
 ```
 
 Sem trecho relacionado, o script imprime `Não foi encontrado.` Sem argumento, a pergunta padrão continua a da spec.
@@ -55,13 +64,13 @@ Sem trecho relacionado, o script imprime `Não foi encontrado.` Sem argumento, a
 ## Estrutura
 
 ```
-rag-mnemo/
+mnemo-rag-engineering-lab/
   .specify/spec.md
   .specify/plan.md
   docs/WHAT_IS_A_SKILL.md
   knowledge/
   scripts/ask.lua
-  scripts/skills_demo.lua
+  scripts/skills.lua
   src/                       # Rust: store, rag, lua_api, dispatch
 ```
 
