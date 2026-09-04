@@ -1,9 +1,9 @@
 ---
-name: teach-mnemo
+name: teach-me
 description: Explains Mnemo RAG and Skills to beginners in simple Portuguese. Use when the user asks what RAG, skill, dispatch, embedding, or chunking is, or how to use skills in a prompt in this lab.
 ---
 
-# Teach Mnemo (beginner)
+# Teach me (beginner)
 
 Answer in Portuguese. Keep analogies. Do not mix in other repos.
 

@@ -12,7 +12,7 @@ Mencione a skill pelo `name`, ou peça a tarefa que o `description` descreve.
 | `follow-spec` | Qualquer mudança neste projeto (lê CONTEXT + spec; **atualiza os markdowns** no mesmo passo) |
 | `implement-rag` | Implementar index/ask/vector store |
 | `implement-skills` | Skills Lua + `dispatch` |
-| `teach-mnemo` | Explicar conceitos para iniciante |
+| `teach-me` | Explicar conceitos para iniciante |
 
 ## Onde ficam
 
