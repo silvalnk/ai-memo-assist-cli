@@ -89,4 +89,7 @@ flowchart TB
 
 - README (RAG + Skill)
 - `docs/WHAT_IS_A_SKILL.md`
+- `.specify/CONTEXT.md` (estado atual; atualizar junto com o código)
+- `.specify/COMMITS.md` (conventional commits + emoji)
+- `AGENTS.md` (briefing do agente Cursor)
 - `knowledge/*.md` (textos indexáveis)

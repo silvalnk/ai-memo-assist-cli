@@ -61,7 +61,16 @@ Neste lab **não há LLM**. Então o Mundo A não roda aqui.
 
 ### Mundo B — Mnemo (este projeto, sem API)
 
-Você usa skills de **três jeitos**, todos em Lua:
+No terminal (igual o `ask.lua` passa a pergunta):
+
+```bash
+cargo run -- scripts/skills.lua
+cargo run -- scripts/skills.lua explain_chunking
+```
+
+Sem argumento, o padrão é `explain_rag`. Nome desconhecido imprime `Unknown skill` e a lista. A skill por dentro chama `ask`.
+
+Na API Lua você ainda tem **três jeitos** (CAP-6 `dispatch` continua no host):
 
 **1. Chamada explícita (mais claro para aprender)**
 

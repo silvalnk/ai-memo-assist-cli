@@ -32,8 +32,8 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
   - **success:** `cargo run -- scripts/ask.lua` e `cargo run -- scripts/skills.lua` funcionam.
 
 - **CAP-4** — Documentação SDD + README didático
-  - **intent:** Spec, plan e README (RAG + Skill) para iniciante.
-  - **success:** Leitor explica as 3 etapas do RAG e a diferença Skill vs `ask` direto.
+  - **intent:** Spec, plan, CONTEXT, README (RAG + Skill) para iniciante **e** para retomar o lab sem o chat anterior.
+  - **success:** Leitor explica as 3 etapas do RAG e a diferença Skill vs `ask` direto. Uma sessão nova no Cursor lê `AGENTS.md` + `.specify/CONTEXT.md` e recupera o mesmo contrato. Qualquer mudança de comportamento no código **atualiza no mesmo passo** spec/plan/CONTEXT/README (e skills do Cursor, se o contrato delas mudar). Docs defasados = CAP-4 falhou. Commits git seguem [`.specify/COMMITS.md`](./COMMITS.md) (`✨ feat:` …, inglês).
 
 - **CAP-5** — Mini sistema de Skills (sem Agent completo)
   - **intent:** Skill = capacidade **nomeada** + descrição + função Lua. O usuário registra skills que por dentro chamam `ask` (ou lógica fixa). Assim se aprende o padrão “skill = ferramenta reutilizável” usado em agentes — **sem** o loop think/plan/act de um Agent.

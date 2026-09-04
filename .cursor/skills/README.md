@@ -8,7 +8,8 @@ Mencione a skill pelo `name`, ou peça a tarefa que o `description` descreve.
 
 | Skill | Quando |
 |-------|--------|
-| `follow-spec` | Qualquer mudança neste projeto |
+| `conventional-commits` | Pedido de **commit** / commit por arquivo (`✨ feat:` …) |
+| `follow-spec` | Qualquer mudança neste projeto (lê CONTEXT + spec; **atualiza os markdowns** no mesmo passo) |
 | `implement-rag` | Implementar index/ask/vector store |
 | `implement-lua-skills` | Skills Lua + `dispatch` |
 | `teach-mnemo` | Explicar conceitos para iniciante |

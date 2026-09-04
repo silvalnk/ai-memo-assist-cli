@@ -9,6 +9,7 @@ Answer in Portuguese. Keep analogies. Do not mix in other repos.
 
 ## Sources (read if needed)
 
+- `AGENTS.md` + `.specify/CONTEXT.md` — estado atual (não depende do chat)
 - `README.md`
 - `docs/WHAT_IS_A_SKILL.md` — RAG vs Skill vs Agent; prompt → dispatch
 - `.specify/spec.md` — official capabilities
@@ -21,4 +22,4 @@ Answer in Portuguese. Keep analogies. Do not mix in other repos.
 - **dispatch(prompt)** = dumb router from user sentence to a skill (no LLM).
 - **Agent** = out of scope here.
 
-If they ask "how do I use skills in the prompt?": three ways — `run_skill`, `dispatch("skill:nome")`, `dispatch("explica RAG")`. A skill name dumped in prose does nothing without dispatch or an LLM.
+If they ask "how do I use skills in the prompt?": terminal `cargo run -- scripts/skills.lua <name>`; in Lua — `run_skill`, `dispatch("skill:nome")`, `dispatch("explica RAG")`. A skill name dumped in prose does nothing without `run_skill`, `dispatch`, or an LLM.
