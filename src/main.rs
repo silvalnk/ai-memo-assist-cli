@@ -8,7 +8,7 @@ use anyhow::{bail, Context, Result};
 fn main() -> Result<()> {
     let mut args = std::env::args().skip(1);
     let Some(script) = args.next() else {
-        bail!("usage: rag-mnemo <script.lua> [question|skill]");
+        bail!("usage: memo-assist <script.lua> [question|skill]");
     };
     let extra: Vec<String> = args.collect();
 

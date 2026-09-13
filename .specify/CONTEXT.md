@@ -1,4 +1,4 @@
-# Mnemo — contexto persistente
+# MemoAssist — contexto persistente
 
 > Leia este arquivo **no início de qualquer sessão** (Cursor ou clone novo).
 > Não depende do chat anterior. A fonte da verdade continua sendo [SPEC.md](./SPEC.md).
@@ -13,15 +13,17 @@ Atualizado para o estado **implementado** do lab (CAP-1…6 feitos).
 
 | | |
 |--|--|
-| Produto | **Mnemo** (memória para docs) |
-| GitHub | [silvalnk/mnemo-rag-engineering-lab](https://github.com/silvalnk/mnemo-rag-engineering-lab) (privado) |
-| Pasta local típica | `rag_mnemo/` |
-| Binário | `rag-mnemo` |
+| Produto | **MemoAssist** (memória para docs) |
+| GitHub | [silvalnk/ai-memo-assist-cli](https://github.com/silvalnk/ai-memo-assist-cli) |
+| Pasta local típica | `memo_assist_cli/` |
+| Binário | `memo-assist` |
 | Stack | Rust core + Lua scripts. Sem Ruby, sem API paga |
 | Embeddings | stub hash determinístico (128 dims), **não** entende português |
 | Store | `vector_store.json` (gerado; está no `.gitignore`) |
 | CLI copy | **inglês** (`Not found.`, `Unknown skill`, `Asking:`) |
 | Knowledge | `knowledge/*.md` em **português** (é o caderno, não a UI). Nomes: `RAG.md`, `CHUNKING.md`, `EMBEDDINGS.md`, `SKILL.md` |
+
+Slug antigo: `ai-mnemo-rag-lab` → `ai-mnemo-lab` → `ai-mnemo-assist-cli`. Nome atual: **`ai-memo-assist-cli`**, no padrão `ai-[nome]-assist-cli` (como `ai-devassist-cli`). Pasta local: `memo_assist_cli/`. Marca: **MemoAssist**. Binário: `memo-assist`.
 
 ## O que o lab ensina
 
@@ -69,7 +71,7 @@ Registradas **em memória** só enquanto o processo roda (não vão para o JSON)
 
 | Arquivo | Papel |
 |---------|--------|
-| `src/main.rs` | CLI: `rag-mnemo <script.lua> [question\|skill]` |
+| `src/main.rs` | CLI: `memo-assist <script.lua> [question\|skill]` |
 | `src/store.rs` | JSON + cosine + `related_hits` |
 | `src/rag.rs` | chunk (`#`), embed stub, `index_dir`, `query` |
 | `src/lua_api.rs` | bindings mlua |
@@ -79,7 +81,7 @@ API Lua: `index`, `ask`, `log`, `register_skill`, `run_skill`, `list_skills`, `d
 
 ## Dois tipos de “skill” (não misturar)
 
-- **Lua (Mnemo)** — `register_skill` / `run_skill` no binário
+- **Lua (MemoAssist)** — `register_skill` / `run_skill` no binário
 - **Cursor (este repo)** — `.cursor/skills/*/SKILL.md` (`follow-spec`, `implement-rag`, `implement-skills`, `teach-me`)
 
 ## Non-goals (não adicionar)

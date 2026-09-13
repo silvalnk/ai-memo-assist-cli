@@ -1,6 +1,6 @@
 # O que é uma Skill? (para iniciantes)
 
-Este arquivo faz parte do **Mnemo** (`rag-mnemo`). Leia antes de olhar o código.
+Este arquivo faz parte do **MemoAssist** (`memo-assist`). Leia antes de olhar o código.
 
 ## Em uma frase
 
@@ -59,7 +59,7 @@ Isso se chama **tool use / function calling**. O prompt **não executa** a skill
 
 Neste lab **não há LLM**. Então o Mundo A não roda aqui.
 
-### Mundo B — Mnemo (este projeto, sem API)
+### Mundo B — MemoAssist (este projeto, sem API)
 
 No terminal (igual o `ask.lua` passa a pergunta):
 

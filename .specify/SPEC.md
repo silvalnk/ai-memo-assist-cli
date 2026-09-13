@@ -1,7 +1,7 @@
-# Mnemo / rag-mnemo — Spec (Spec Kit)
+# MemoAssist / ai-memo-assist-cli — Spec (Spec Kit)
 
 > Spec-Driven Development: este arquivo é a **fonte da verdade**.
-> Pasta do projeto: `rag-mnemo/`. Produto: **Mnemo** (memória para seus docs).
+> Pasta do projeto: `memo_assist_cli/`. Produto: **MemoAssist** (memória para seus docs).
 
 ## Intent
 
@@ -12,9 +12,9 @@ Iniciantes em engenharia de IA precisam **ver e tocar**:
 
 sem o ruído de um Agent completo, workflows ou APIs pagas.
 
-O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busca por similaridade e permite **registrar e executar skills em Lua** que usam o RAG por baixo — como ferramentas rotuladas na caixa de ferramentas.
+O MemoAssist é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busca por similaridade e permite **registrar e executar skills em Lua** que usam o RAG por baixo — como ferramentas rotuladas na caixa de ferramentas.
 
-**Nome:** *Mnemo* (Mnemosyne / memória). Pasta: `rag-mnemo`.
+**Nome:** *MemoAssist* (memória para docs). Repo: `ai-memo-assist-cli`. Binário: `memo-assist`.
 
 ## Capabilities
 
@@ -25,7 +25,7 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
 - **CAP-2** — Buscar trechos por pergunta
   - **intent:** Retornar top-k chunks **relacionados** com `score`, `text`, `source` (cosine similarity). Não devolver o caderno inteiro nem hits com score ≤ 0.
   - **success:** `ask("o que e RAG?")` devolve só trechos relevantes; pergunta sem overlap (ou só ruído do stub) devolve lista vazia. Scripts imprimem `Not found.` quando a lista é vazia.
-  - **CLI:** `rag-mnemo scripts/ask.lua` usa a pergunta padrão; `rag-mnemo scripts/ask.lua "o que e chunking?"` busca de forma dinâmica.
+  - **CLI:** `memo-assist scripts/ask.lua` usa a pergunta padrão; `memo-assist scripts/ask.lua "o que e chunking?"` busca de forma dinâmica.
 
 - **CAP-3** — Script Lua como interface
   - **intent:** API Lua: `index`, `ask`, `log`, `register_skill`, `run_skill`, `list_skills`, `dispatch`.
@@ -41,7 +41,7 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
     1. `register_skill("explain_rag", "Explica RAG usando a knowledge base", fn)`
     2. `run_skill("explain_rag", {})` imprime trechos via RAG
     3. `list_skills()` lista nome + descrição
-  - **CLI:** `rag-mnemo scripts/skills.lua` usa `explain_rag`; `rag-mnemo scripts/skills.lua explain_chunking` executa pelo nome e imprime o resultado. Nome desconhecido → erro claro (não inventa skill).
+  - **CLI:** `memo-assist scripts/skills.lua` usa `explain_rag`; `memo-assist scripts/skills.lua explain_chunking` executa pelo nome e imprime o resultado. Nome desconhecido → erro claro (não inventa skill).
   - **doc:** `docs/WHAT_IS_A_SKILL.md` + `knowledge/SKILL.md`
 
 - **CAP-6** — Ligar um **prompt do usuário** a uma skill (sem LLM)
@@ -56,7 +56,7 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
 - Embeddings: **stub determinístico** (hash)
 - Persistência: `vector_store.json`
 - Skills vivem no runtime Lua (registro em memória por execução) — sem Agent Orchestrator
-- Binário CLI: `rag-mnemo` (alinhado ao nome da pasta)
+- Binário CLI: `memo-assist` (marca). Repo GitHub: `ai-memo-assist-cli`
 
 ## Non-goals
 
@@ -69,7 +69,7 @@ O Mnemo é um laboratório mínimo (**Rust + Lua**): indexa markdown local, busc
 
 ## Success Signal
 
-Alguém clona `rag-mnemo`, lê a spec, roda:
+Alguém clona `ai-memo-assist-cli`, lê a spec, roda:
 
 1. `scripts/ask.lua` → vê hits do RAG
 2. `scripts/skills.lua [nome]` → vê o resultado da skill (`explain_rag` por padrão)
@@ -83,5 +83,5 @@ e consegue dizer: “`ask` é a busca crua; a **skill** é um pacote nomeado; o 
 
 ## Open Questions
 
-- [Resolvido] Pasta = `rag-mnemo`, binário = `rag-mnemo`, marca = Mnemo
+- [Resolvido] Repo = `ai-memo-assist-cli`, binário = `memo-assist`, marca = MemoAssist
 - Futuro: Ollama embeddings sem mudar API Lua das skills

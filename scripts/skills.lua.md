@@ -1,6 +1,6 @@
-# Script Lua do Mnemo (`skills.lua`)
+# Script Lua do MemoAssist (`skills.lua`)
 
-O binário `rag-mnemo` executa [`scripts/skills.lua`](skills.lua).
+O binário `memo-assist` executa [`scripts/skills.lua`](skills.lua).
 
 Igual ao `ask.lua`: o argumento extra escolhe **qual skill** rodar.
 

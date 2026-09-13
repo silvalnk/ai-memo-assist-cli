@@ -9,4 +9,4 @@ A métrica neste lab é cosine similarity:
 - perto de 1 = muito parecido
 - perto de 0 = pouco relacionado
 
-Importante: no Mnemo o embedding é um STUB (hash). Ele não “entende” português de verdade. Serve para você ver o pipeline. Em produção, um modelo de embedding gera números com significado real.
+Importante: no MemoAssist o embedding é um STUB (hash). Ele não “entende” português de verdade. Serve para você ver o pipeline. Em produção, um modelo de embedding gera números com significado real.

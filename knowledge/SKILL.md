@@ -8,6 +8,6 @@ Diferença importante:
 
 - **ask** = busca direta no banco de vetores (RAG)
 - **Skill** = um pacote nomeado que pode usar o ask por dentro
-- **Agent** = quem decide sozinho qual skill usar (não faz parte do Mnemo)
+- **Agent** = quem decide sozinho qual skill usar (não faz parte do MemoAssist)
 
-Skills existem para organizar ferramentas. No Mnemo você registra e executa skills em Lua para aprender esse padrão.
+Skills existem para organizar ferramentas. No MemoAssist você registra e executa skills em Lua para aprender esse padrão.

@@ -1,4 +1,4 @@
-# Mnemo / rag-mnemo — Plan (como construir)
+# MemoAssist / ai-memo-assist-cli — Plan (como construir)
 
 Companion de [SPEC.md](./SPEC.md).
 
@@ -56,7 +56,7 @@ flowchart TB
 
 ## Módulos Rust
 
-- `main.rs` — CLI: `rag-mnemo <script.lua> [pergunta|skill]` (`arg[1]` no Lua)
+- `main.rs` — CLI: `memo-assist <script.lua> [pergunta|skill]` (`arg[1]` no Lua)
 - `store.rs` — vector store + cosine + JSON
 - `rag.rs` — chunk, embed stub, index, query
 - `lua_api.rs` — `index`, `ask`, `log`, `register_skill`, `run_skill`, `list_skills`, `dispatch`
@@ -64,7 +64,7 @@ flowchart TB
 ## Tasks
 
 ### Núcleo RAG (CAP-1…3)
-- [x] `Cargo.toml` + bin `rag-mnemo`
+- [x] `Cargo.toml` + bin `memo-assist`
 - [x] `store.rs` + testes cosine
 - [x] `rag.rs` chunk + embed stub + index/query
 - [x] `lua_api.rs` — `index`, `ask`, `log`

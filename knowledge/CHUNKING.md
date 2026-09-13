@@ -6,6 +6,6 @@ Por quê? Porque a busca funciona melhor com trechos focados. Um livro inteiro c
 
 Exemplo: este arquivo é um chunk pequeno de propósito.
 
-No Mnemo, o Rust corta por títulos markdown (`#`) ou por parágrafos.
+No MemoAssist, o Rust corta por títulos markdown (`#`) ou por parágrafos.
 
 Pedaço demais pequeno perde contexto. Pedaço demais grande mistura assuntos. O equilíbrio é parte do desenho do RAG.

@@ -8,4 +8,4 @@ Sem RAG, um modelo de linguagem responde só com o que “lembrou” do treiname
 
 Com RAG, o sistema abre o caderno (esta pasta `knowledge/`), acha o parágrafo certo e usa esse parágrafo como base.
 
-No Mnemo, a etapa “responder” mostra os trechos encontrados — para você ver a busca com clareza.
+No MemoAssist, a etapa “responder” mostra os trechos encontrados — para você ver a busca com clareza.

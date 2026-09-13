@@ -1,9 +1,9 @@
 ---
 name: follow-spec
-description: Treats rag_mnemo Spec Kit files as source of truth. Use when editing this repo, implementing features, changing Lua API, or when the user mentions SDD, spec, CAP-1, Mnemo, or rag_mnemo.
+description: Treats ai-memo-assist-cli Spec Kit files as source of truth. Use when editing this repo, implementing features, changing Lua API, or when the user mentions SDD, spec, CAP-1, MemoAssist, ai-memo-assist-cli, or memo_assist_cli.
 ---
 
-# Follow spec (rag_mnemo)
+# Follow spec (ai-memo-assist-cli)
 
 ## Before any code change
 
@@ -38,9 +38,9 @@ A change is **not done** until CONTEXT.md matches the code. If the user did not 
 
 - Stack: Rust core + Lua scripts only. No Ruby, no paid APIs.
 - Embeddings: deterministic stub hash.
-- Binary name: `rag-mnemo`.
+- Binary name: `memo-assist`.
 - Capabilities: CAP-1 index, CAP-2 ask, CAP-3 Lua API, CAP-4 docs, CAP-5 skills, CAP-6 `dispatch`.
-- CLI: `rag-mnemo <script.lua> [question|skill]`. Scripts print English (`Not found.`, `Unknown skill`).
+- CLI: `memo-assist <script.lua> [question|skill]`. Scripts print English (`Not found.`, `Unknown skill`).
 - Skills script: `scripts/skills.lua [name]` (default `explain_rag`), not `skills_demo.lua`.
 
 ## Non-goals (do not add)

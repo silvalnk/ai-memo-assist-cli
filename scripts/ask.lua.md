@@ -1,9 +1,9 @@
-# Script Lua do Mnemo (`ask.lua`)
+# Script Lua do MemoAssist (`ask.lua`)
 
-O binário `rag-mnemo` executa [`scripts/ask.lua`](ask.lua).
+O binário `memo-assist` executa [`scripts/ask.lua`](ask.lua).
 
 ```lua
-log("Mnemo: indexando knowledge/")
+log("MemoAssist: indexando knowledge/")
 index("knowledge/")
 
 local pergunta = (arg and arg[1] and arg[1] ~= "") and arg[1] or "o que e RAG?"

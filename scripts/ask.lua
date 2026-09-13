@@ -1,5 +1,5 @@
--- Mnemo — user CLI (CAP-2 / CAP-3)
-log("Mnemo: indexing knowledge/")
+-- MemoAssist — user CLI (CAP-2 / CAP-3)
+log("MemoAssist: indexing knowledge/")
 index("knowledge/")
 
 local question = (arg and arg[1] and arg[1] ~= "") and arg[1] or "o que e RAG?"

@@ -1,6 +1,6 @@
 # Cursor Agent Skills (este repo)
 
-Skills do **agente do Cursor** (arquivos `SKILL.md`). Não confundir com as skills **Lua** do Mnemo (`register_skill` / `run_skill`).
+Skills do **agente do Cursor** (arquivos `SKILL.md`). Não confundir com as skills **Lua** do MemoAssist (`register_skill` / `run_skill`).
 
 ## Como usar no chat
 

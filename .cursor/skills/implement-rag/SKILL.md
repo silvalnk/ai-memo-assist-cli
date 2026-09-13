@@ -1,21 +1,21 @@
 ---
 name: implement-rag
-description: Implements the Mnemo RAG pipeline in Rust (chunk, stub embeddings, cosine search, vector_store.json). Use when adding src/, Cargo.toml, index/ask, or when the user asks to implement RAG, vector store, or chunking in rag_mnemo.
+description: Implements the MemoAssist RAG pipeline in Rust (chunk, stub embeddings, cosine search, vector_store.json). Use when adding src/, Cargo.toml, index/ask, or when the user asks to implement RAG, vector store, or chunking in ai-memo-assist-cli.
 ---
 
-# Implement RAG (rag_mnemo)
+# Implement RAG (ai-memo-assist-cli)
 
 ## Contract
 
 - `index(dir)`: read `*.md`, chunk (prefer markdown headings), stub embedding, save `vector_store.json`.
 - `ask(question)`: return list of `{ text, score, source }` (related hits only: score floor + relative to best). Empty list if nothing related.
-- CLI: `rag-mnemo scripts/ask.lua [question]`. Script prints `Not found.` when empty.
+- CLI: `memo-assist scripts/ask.lua [question]`. Script prints `Not found.` when empty.
 - No network. Stub embedding must be deterministic.
 
 ## Layout
 
 ```
-src/main.rs      # CLI: rag-mnemo <script.lua> [question|skill]
+src/main.rs      # CLI: memo-assist <script.lua> [question|skill]
 src/store.rs     # insert/search/save/load + related_hits + cosine tests
 src/rag.rs       # chunk + embed stub + index_dir + query
 src/dispatch.rs  # prompt → skill name

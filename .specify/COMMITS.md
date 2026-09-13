@@ -38,7 +38,7 @@ If one commit touches mixed concerns, pick the **primary** type (usually `feat` 
 
 ```
 ✨ feat: run skills by CLI name with English CLI copy
-📝 docs: add Mnemo product spec
+📝 docs: add MemoAssist product spec
 🙈 chore: ignore build artifacts and vector store
 🤖 chore: add follow-spec agent skill
 🔒 chore: lock Rust dependencies

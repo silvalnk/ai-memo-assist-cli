@@ -1,5 +1,5 @@
--- Mnemo — skills CLI (CAP-5)
-log("Mnemo: indexing knowledge/")
+-- MemoAssist — skills CLI (CAP-5)
+log("MemoAssist: indexing knowledge/")
 index("knowledge/")
 
 local function show_hits(hits)

@@ -1,6 +1,6 @@
 ---
 name: conventional-commits
-description: Create git commits for rag_mnemo using conventional commits plus emoji, in English. Use when the user asks to commit, conventional commit, commit message, git commit, or commit each file.
+description: Create git commits for ai-memo-assist-cli using conventional commits plus emoji, in English. Use when the user asks to commit, conventional commit, commit message, git commit, or commit each file.
 ---
 
 # Conventional commits + emoji

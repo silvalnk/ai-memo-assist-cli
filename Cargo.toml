@@ -1,11 +1,11 @@
 [package]
-name = "rag-mnemo"
+name = "memo-assist"
 version = "0.1.0"
 edition = "2021"
-description = "Mnemo — lab mínimo de RAG + Skills (Rust + Lua)"
+description = "MemoAssist — lab mínimo de RAG + Skills (Rust + Lua)"
 
 [[bin]]
-name = "rag-mnemo"
+name = "memo-assist"
 path = "src/main.rs"
 
 [dependencies]

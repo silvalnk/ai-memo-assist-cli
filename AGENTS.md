@@ -20,7 +20,7 @@ Behavior change â†’ markdown change. Minimum: **CONTEXT.md**. Contract change â†
 
 ## Product (one paragraph)
 
-**Mnemo** (`rag-mnemo`) is an offline Rust + Lua lab: index local `knowledge/*.md`, stub-hash embeddings, cosine search, in-memory Lua skills. Binary: `rag-mnemo`. Repo: `silvalnk/mnemo-rag-engineering-lab`.
+**MemoAssist** (`memo-assist`) is an offline Rust + Lua lab: index local `knowledge/*.md`, stub-hash embeddings, cosine search, in-memory Lua skills. Binary: `memo-assist`. Repo: `silvalnk/ai-memo-assist-cli`.
 
 ## Commands
 

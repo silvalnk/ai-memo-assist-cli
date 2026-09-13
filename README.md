@@ -1,11 +1,11 @@
-# Mnemo
+# MemoAssist
 
 > **Memória para os seus documentos.**  
 > Lab mínimo de **RAG + Skills** com **Rust + Lua**.  
 > 100% offline. Spec-Driven (SDD).
 
-Repositório: [silvalnk/mnemo-rag-engineering-lab](https://github.com/silvalnk/mnemo-rag-engineering-lab)  
-Pasta local: `rag_mnemo/` · Marca: **Mnemo** · Binário: `rag-mnemo`
+Repositório: [silvalnk/ai-memo-assist-cli](https://github.com/silvalnk/ai-memo-assist-cli)  
+Pasta local: `memo_assist_cli/` · Marca: **MemoAssist** · Binário: `memo-assist`
 
 | | |
 |--|--|
@@ -53,8 +53,8 @@ Detalhe: [`docs/WHAT_IS_A_SKILL.md`](docs/WHAT_IS_A_SKILL.md) → seção **Skil
 ## Como rodar
 
 ```bash
-git clone git@github.com:silvalnk/mnemo-rag-engineering-lab.git
-cd mnemo-rag-engineering-lab
+git clone git@github.com:silvalnk/ai-memo-assist-cli.git
+cd ai-memo-assist-cli
 cargo test
 cargo run -- scripts/ask.lua                    # pergunta padrão: o que e RAG?
 cargo run -- scripts/ask.lua "o que e chunking?"
@@ -68,7 +68,7 @@ Sem trecho relacionado, o script imprime `Not found.` Sem argumento, `ask.lua` u
 ## Estrutura
 
 ```
-mnemo-rag-engineering-lab/
+ai-memo-assist-cli/
   AGENTS.md                  # briefing do agente (nova sessão)
   .specify/SPEC.md
   .specify/PLAN.md
