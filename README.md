@@ -21,6 +21,7 @@
 | [`.specify/PLAN.md`](.specify/PLAN.md) | **Como** + tasks |
 | [`.specify/CONTEXT.md`](.specify/CONTEXT.md) | Estado atual (retoma o lab sem o chat) |
 | [`.specify/COMMITS.md`](.specify/COMMITS.md) | Conventional commits + emoji |
+| [`LICENSE`](LICENSE) | MIT |
 | [`AGENTS.md`](AGENTS.md) | Briefing fixo para o agente Cursor |
 | [`docs/WHAT_IS_A_SKILL.md`](docs/WHAT_IS_A_SKILL.md) | Skill Lua explicada para iniciante |
 | [`.cursor/skills/README.md`](.cursor/skills/README.md) | Agent Skills do Cursor (este repo) |
@@ -70,6 +71,7 @@ Sem trecho relacionado, o script imprime `Not found.` Sem argumento, `ask.lua` u
 ```
 ai-memo-assist-cli/
   AGENTS.md                  # briefing do agente (nova sessão)
+  LICENSE                    # MIT
   .specify/SPEC.md
   .specify/PLAN.md
   .specify/CONTEXT.md        # estado atual do lab
@@ -84,3 +86,7 @@ ai-memo-assist-cli/
 ## Knowledge base
 
 Textos curtos em `knowledge/` (RAG, chunking, embeddings, skill) — feitos para indexar e perguntar.
+
+## Licença
+
+MIT. Ver [`LICENSE`](LICENSE). Uso educacional; sem API paga.

@@ -3,6 +3,7 @@ name = "memo-assist"
 version = "0.1.0"
 edition = "2021"
 description = "MemoAssist — lab mínimo de RAG + Skills (Rust + Lua)"
+license = "MIT"
 
 [[bin]]
 name = "memo-assist"

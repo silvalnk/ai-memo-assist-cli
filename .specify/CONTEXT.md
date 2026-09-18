@@ -99,3 +99,4 @@ Agent loop, RFC/HITL, OpenAI, UI web, Qdrant, hybrid search, reranking, LLM gera
 | `README.md` | visão + comandos |
 | `docs/WHAT_IS_A_SKILL.md` | Skill vs ask vs Agent |
 | `AGENTS.md` | regras para o agente Cursor |
+| `LICENSE` | MIT |
