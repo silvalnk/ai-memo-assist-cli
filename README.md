@@ -4,6 +4,11 @@
 > Lab mínimo de **RAG + Skills** com **Rust + Lua**.  
 > 100% offline. Spec-Driven (SDD).
 
+Repositório: [silvalnk/ai-memo-assist-cli](https://github.com/silvalnk/ai-memo-assist-cli)  
+Pasta local: `memo_assist_cli/` · Marca: **MemoAssist** · Binário: `memo-assist`
+
+![MemoAssist: ask, Not found e skill explain_rag](docs/images/cli.png)
+
 | | |
 |--|--|
 | Stack | Rust (core) + Lua (scripts) |
@@ -22,6 +27,7 @@
 | [`AGENTS.md`](AGENTS.md) | Briefing fixo para o agente Cursor |
 | [`docs/WHAT_IS_A_SKILL.md`](docs/WHAT_IS_A_SKILL.md) | Skill Lua explicada para iniciante |
 | [`.cursor/skills/README.md`](.cursor/skills/README.md) | Agent Skills do Cursor (este repo) |
+| [`docs/images/cli.png`](docs/images/cli.png) | Print da CLI |
 | Este README | Visão geral |
 
 Se código e spec divergirem, a **spec manda**.
@@ -71,6 +77,7 @@ ai-memo-assist-cli/
   .specify/PLAN.md
   .specify/CONTEXT.md        # estado atual do lab
   docs/WHAT_IS_A_SKILL.md
+  docs/images/cli.png
   knowledge/
   scripts/ask.lua
   scripts/skills.lua
