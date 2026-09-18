@@ -4,9 +4,6 @@
 > Lab mínimo de **RAG + Skills** com **Rust + Lua**.  
 > 100% offline. Spec-Driven (SDD).
 
-Repositório: [silvalnk/ai-memo-assist-cli](https://github.com/silvalnk/ai-memo-assist-cli)  
-Pasta local: `memo_assist_cli/` · Marca: **MemoAssist** · Binário: `memo-assist`
-
 | | |
 |--|--|
 | Stack | Rust (core) + Lua (scripts) |
