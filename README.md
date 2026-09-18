@@ -1,4 +1,4 @@
-# MemoAssist
+# MemoAssist CLI
 
 > **Memória para os seus documentos.**  
 > Lab mínimo de **RAG + Skills** com **Rust + Lua**.  
